@@ -30,3 +30,11 @@ def explorar_datos(df):
 #exploramos los datos
 explorar_datos(df)
 
+def separar_variables(df):
+#Separa en Features y Target
+    X = df.drop('target', axis=1)
+    y = df['target']
+    return X, y
+
+#separar las variables
+X, y = separar_variables(df)
